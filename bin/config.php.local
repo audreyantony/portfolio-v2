@@ -1,0 +1,10 @@
+<?php
+
+// TO CONNECT (fill your info at the right place and change the name from config.php.local to config.php)
+define("DB_TYPE","");
+define("DB_HOST","");
+define("DB_NAME","");
+define("DB_LOGIN","");
+define("DB_PWD","");
+define("DB_PORT",);
+define("DB_CHARSET","");
