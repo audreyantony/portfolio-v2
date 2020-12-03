@@ -8,7 +8,7 @@ session_start();
 require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'bin' . DIRECTORY_SEPARATOR . 'config.php';
 require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'model' . DIRECTORY_SEPARATOR . 'DB.model.php';
 // AND CONNECTION
-$db = connectionToDB();
+    $db = connectionToDB();
 
 // CONNECTION ERROR MANAGEMENT
 if(!$db){
