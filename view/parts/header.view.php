@@ -15,12 +15,12 @@
                 <nav role="navigation">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                     <ul class="menu">
-                        <a href="?home"><li>Accueil</li></a>
-                        <a href="?gallery"><li>Galerie</li></a>
-                        <a href="?links"><li>Liens</li></a>
-                        <a href="?cv"><li>CV</li></a>
-                        <a href="?contact"><li>Contact</li></a>
-                        <a href="?connection"><li>Connexion</li></a>
+                        <a href="?page=home"><li>Accueil</li></a>
+                        <a href="?page=gallery"><li>Galerie</li></a>
+                        <a href="?page=links"><li>Liens</li></a>
+                        <a href="?page=cv"><li>CV</li></a>
+                        <a href="?page=contact"><li>Contact</li></a>
+                        <a href="?page=connection"><li>Connexion</li></a>
                     </ul>
                     <div id="container">
                         <div class="inner-container">
