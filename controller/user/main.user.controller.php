@@ -1,7 +1,10 @@
 <?php
+
+// WHEN THE USER IS NAVIGATING THE USER PART OF THE WEBSITE
 if (isset($_GET['page'])) {
 
-    require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'parts' . DIRECTORY_SEPARATOR . 'header.view.php';
+    // HEADER
+    $header;
 
     switch ($_GET['page']) {
         // HOME PAGE
@@ -24,10 +27,29 @@ if (isset($_GET['page'])) {
         case "contact":
             include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . 'contact.user.controller.php';
             break;
+        // CONTACT PAGE
+        case "connection":
+            include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'connection.public.controller.php';
+            break;
         // DEFAULT PAGE -> 404
         default :
             include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'error' . DIRECTORY_SEPARATOR . 'page.error.view.php';
     }
 
-    require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'parts' . DIRECTORY_SEPARATOR . 'footer.view.php';
+    // FOOTER
+    $footer;
+
+// FIRST DISPLAY OF THE USER PAGE
+}
+
+
+if (!isset($_GET['page'])){
+
+    // DISPLAY OF THE HOME PAGE
+    $header;
+
+    include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . 'home.user.controller.php';
+
+    $footer;
+
 }
