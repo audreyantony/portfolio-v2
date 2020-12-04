@@ -3,12 +3,12 @@
     font-family: 'Montserrat', sans-serif;          NORMAL
 
     COULEURS :
-    #F5EFF4 : BLANC;
-    245, 239, 244
+    #F3F0F2 : BLANC;
+    243, 240, 242
     #304B42 : VERT;
     48, 75, 66
-    #545452 : BRUN;
-    84, 84, 82
+    #535052 : BRUN;
+    83, 80, 82
 */
 
 body {
@@ -16,9 +16,33 @@ body {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    width: 100%;
+    background-blend-mode: screen;
+    background-image: url("../img/background/fondaccueil.jpg");
+    background-color: #535052;
+    background-position: center top;
+    background-size: cover;
 }
 
 /* NAVIGATION */
+
+.openMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100px;
+    padding: 20px;
+    cursor:pointer;
+}
+
+.openMenu img {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.9;
+}
 
 .sideNav {
     height: 100%;
@@ -28,7 +52,7 @@ body {
     top: 0;
     left: 0;
     background: rgba(0,0,0,0);
-    background: linear-gradient(90deg, rgba(245,239,244,1) 46%, rgba(245,239,244,0.2) 100%);
+    background: linear-gradient(90deg, rgba(243,240,242,1) 6%, rgba(243,240,242,0.2) 100%);
     overflow-x: hidden;
     transition: 0.8s;
     padding-top: 80px;
@@ -42,7 +66,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 1.2rem;
-    color: #545452;
+    color: #535052;
     letter-spacing: 4px;
     display: block;
     transition: 0.3s;
@@ -57,9 +81,10 @@ body {
 .sideNav .closebtn {
     position: absolute;
     top: 0;
-    left: 25px;
+    left: 35px;
     font-size: 6rem;
     margin: 20px 5px;
+    font-family: 'Fredericka the Great', sans-serif;
 }
 
 .menu {
@@ -125,13 +150,13 @@ body {
 }
 
 #container .inner-container:first-child {
-    background: rgba(84, 84, 82,0.4);
-    color: #F5EFF4;
+    background: rgba(83, 80, 82,0.4);
+    color: #F3F0F2;
 }
 
 #container .inner-container:nth-child(2) {
-    background: rgba(84, 84, 82,0.5);
-    color: #F5EFF4;
+    background: rgba(83, 80, 82,0.5);
+    color: #F3F0F2;
     clip-path: inset(0 50% 0 0);
     transition: .3s cubic-bezier(0,0,0,1);
 }
@@ -151,7 +176,6 @@ body {
 #container .toggle:nth-child(1) {
     right: 0;
 }
-
 
 /* MEDIA QUERY */
 

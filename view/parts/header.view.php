@@ -13,7 +13,7 @@
         <body>
             <header id="sideBarNav" class="sideNav">
                 <nav role="navigation">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                     <ul class="menu">
                         <a href="?home"><li>Accueil</li></a>
                         <a href="?gallery"><li>Galerie</li></a>
@@ -41,12 +41,12 @@
                         </div>
                     </div>
                     <div class="socialmedia">
-                        <a href="https://www.facebook.com/audrey.antony.calzi" target="_blank"><img src="img/socialmedia/facebook.png" alt="facebook" title="Aller vers ma page Facebook" ></a>
-                        <a href="https://www.instagram.com/antony_audrey/?hl=fr" target="_blank"><img src="img/socialmedia/instagram.png" alt="instagram" title="Aller vers ma page Instagram"></a>
-                        <a href="https://github.com/audreyantony" target="_blank"><img src="img/socialmedia/github.png" alt="github" title="Aller vers ma page Github"></a>
-                        <a href="https://www.linkedin.com/in/audrey-antony-b7754084/" target="_blank"><img src="img/socialmedia/linkedin.png" alt="linkedIn" title="Aller vers ma page LinkedIn"></a>
+                        <a href="https://www.facebook.com/audrey.antony.calzi" target="_blank"><img src="img/socialmedia/lighticon/facebook.png" alt="facebook" title="Aller vers ma page Facebook" ></a>
+                        <a href="https://www.instagram.com/antony_audrey/?hl=fr" target="_blank"><img src="img/socialmedia/lighticon/instagram.png" alt="instagram" title="Aller vers ma page Instagram"></a>
+                        <a href="https://github.com/audreyantony" target="_blank"><img src="img/socialmedia/lighticon/github.png" alt="github" title="Aller vers ma page Github"></a>
+                        <a href="https://www.linkedin.com/in/audrey-antony-b7754084/" target="_blank"><img src="img/socialmedia/lighticon/linkedin.png" alt="linkedIn" title="Aller vers ma page LinkedIn"></a>
                     </div>
                 </nav>
             </header>
 
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+            <span class="openMenu" onclick="openNav()"><img src="img/parts/menulight.png" alt="Menu >>"></span>
