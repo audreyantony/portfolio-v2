@@ -197,6 +197,103 @@ footer p {
     text-shadow: 0 3px 15px rgba(243, 240, 242, 1);
 }
 
+/* BUTTON */
+
+section .contenu a button {
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: rgba(245, 239, 244,0.8);
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    transition: 1s;
+    color: #545452;
+    cursor: pointer;
+}
+
+section .contenu a button:hover {
+    background-color: rgb(245, 239, 244);
+    letter-spacing: 5px;
+    transition: 1s;
+}
+
+section .contenu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* PAGE D'ACCUEIL */
+
+#home {
+    width: 70%;
+    margin: 0 auto;
+    height: 60vh;
+}
+
+#home .contenu {
+    margin: 20vh auto 20vh auto;
+}
+
+#home .contenu h1 {
+    text-align: center;
+    margin: 20px auto 0 auto;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 5rem;
+    font-weight: normal;
+    color: #545452;
+    transition: 1s;
+}
+
+#home .contenu h2 {
+    text-align: center;
+    margin: -25px auto 20px auto;
+    letter-spacing: 12px;
+    font-weight: 200;
+    color: #F5EFF4;
+    background-color: rgba(84, 84, 82, 0.4);
+    transition: 1s;
+}
+
+#home .contenu p {
+    background-color: rgba(200,200,200,0.6);
+    padding: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    transition: 1s;
+    color: #545452;
+}
+#home .contenu p .big {
+    letter-spacing: 5px;
+    font-size: 1.2em;
+}
+
+/* PARAGRAPHE SPÉCIAL ACCUEIL */
+
+#home .contenu .pacc {
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 10px 20px;
+    transition: 1s;
+}
+
+#home .contenu .pacc a {
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #F5EFF4;
+    background-color: rgba(84, 84, 82,0.4);
+    padding: 2px 4px;
+    transition: 1s;
+}
+
+#home .contenu .pacc a:hover {
+    letter-spacing: 5px;
+    padding: 2px 6px;
+    transition: 1s;
+}
+
 /* MEDIA QUERY */
 
 @media screen and (max-height: 450px) {
