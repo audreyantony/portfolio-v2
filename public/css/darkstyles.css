@@ -227,17 +227,17 @@ section .contenu a {
 
 /* PAGE D'ACCUEIL */
 
-#home {
+section {
     width: 70%;
     margin: 0 auto;
     height: 60vh;
 }
 
-#home .contenu {
+section .contenu {
     margin: 20vh auto 20vh auto;
 }
 
-#home .contenu h1 {
+section .contenu h1 {
     text-align: center;
     margin: 20px auto 0 auto;
     font-family: 'Fredericka the Great', cursive;
@@ -248,7 +248,7 @@ section .contenu a {
     transition: 1s;
 }
 
-#home .contenu h2 {
+section .contenu h2 {
     text-align: center;
     margin: -25px auto 20px auto;
     letter-spacing: 12px;
@@ -258,7 +258,7 @@ section .contenu a {
     transition: 1s;
 }
 
-#home .contenu p {
+section .contenu p {
     background-color: rgba(20,20,20,0.4);
     padding: 40px;
     text-align: center;
@@ -267,21 +267,21 @@ section .contenu a {
     transition: 1s;
     color: #F3F0F2;
 }
-#home .contenu p .big {
+section .contenu p .big {
     letter-spacing: 5px;
     font-size: 1.2em;
 }
 
 /* PARAGRAPHE SPÉCIAL ACCUEIL */
 
-#home .contenu .pacc {
+section .contenu .pacc {
     text-align: center;
     letter-spacing: 5px;
     padding: 10px 20px;
     transition: 1s;
 }
 
-#home .contenu .pacc a {
+section .contenu .pacc a {
     letter-spacing: 3px;
     text-decoration: none;
     color: #737072;
@@ -290,10 +290,114 @@ section .contenu a {
     transition: 1s;
 }
 
-#home .contenu .pacc a:hover {
+section .contenu .pacc a:hover {
     letter-spacing: 5px;
     padding: 2px 6px;
     transition: 1s;
+}
+
+/* PAGE CONTACT */
+
+section {
+    width: 70%;
+    margin: 0 auto;
+    height: 60vh;
+}
+
+section .contenu form {
+    background-color: rgba(20,20,20,0.4);
+    padding: 2% 5%;
+    text-align: right;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    transition: 1s;
+    color: #F3F0F2;
+}
+
+
+section .contenu form .grid-container {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10% 10%;
+    grid-template-areas:
+            "name name msg msg"
+            "email email msg msg"
+            "phone phone msg msg";
+}
+
+section .contenu form .grid-container .name {
+    grid-area: name;
+}
+
+section .contenu form .grid-container .email {
+    grid-area: email;
+}
+
+section .contenu form .grid-container .phone {
+    grid-area: phone;
+}
+
+section .contenu form .grid-container .msg {
+    grid-area: msg;
+}
+
+section .contenu form div input {
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    background-color:#535052;
+    color: #F3F0F2;
+    letter-spacing: 3px;
+    border: none;
+}
+
+section .contenu form input {
+    color: #F3F0F2;
+}
+
+form div textarea {
+    text-align: center;
+    padding: 10px;
+    width: 95%;
+    height: 82%;
+    background-color: #535052;
+    color: #F3F0F2;
+    letter-spacing: 3px;
+    border: none;
+    resize: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section .contenu form div input::placeholder {
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+
+section .contenu form div textarea::placeholder {
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+
+section .contenu form .btnenvoyer {
+    display: block;
+    position: relative;
+    left: 35%;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: rgba(63, 60, 62,0.8);
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    transition: 1s;
+}
+
+section .contenu form .btnenvoyer:hover {
+    background-color: rgb(63, 60, 62);
+    letter-spacing: 8px;
+    transition: 1s;
+    cursor: pointer;
 }
 
 /* MEDIA QUERY */

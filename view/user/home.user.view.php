@@ -1,4 +1,4 @@
-<section id="home">
+<section>
     <div class="contenu">
         <!-- TITRE -->
         <h1>{ Bienvenue }</h1>
@@ -10,10 +10,10 @@
             Mon CV sera bientôt en ligne et si tu veux me laisser un message ou que tu as une question n'hésite pas à aller sur la page contact, j'aimerais avoir ton avis !</p>
 
         <!-- BOUTON CONTACT -->
-        <a href="?contact"><button>
+        <a href="?page=contact"><button>
                 Contact
             </button></a>
-        <p class="pacc">En formation au <a href="https://www.cf2m.be/" title="Aller vers le site du CF2M">CF2M</a> depuis <script type="text/javascript">
+        <p class="pacc">En formation au <a href="https://www.cf2m.be/" title="Aller vers le site du CF2M" target="_blank">CF2M</a> depuis <script type="text/javascript">
 
                 var Date1 = new Date(2020,0,6);
                 var Date2 = new Date();
