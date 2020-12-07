@@ -3,11 +3,18 @@
         <h1>{ Contact }</h1>
         <h2>Un petit mot ou une question ?</h2>
         <form method="post" >
+            <?php
+            if (isset($warning)){
+                echo "<span class='warning'>".$warning."</span>";
+            } else {
+                echo "<span class='warning'> </span>";
+            }
+            ?>
             <div class="grid-container">
-                    <input class="name" type="text" name="nom" placeholder="Votre nom">
-                    <input class="email" type="email" name="email" placeholder="Votre adresse email">
-                    <input class="phone" type="tel" name="email" placeholder="Votre numéro de téléphone">
-                    <textarea class="msg" name="message" placeholder="Votre question, suggestion et/ou avis !"></textarea>
+                    <input class="name" type="text" name="name" placeholder="Votre nom" value="<?=$name?>">
+                    <input class="email" type="email" name="mail" placeholder="Votre adresse email" value="<?=$mail?>">
+                    <input class="phone" type="tel" name="phone" placeholder="Votre numéro de téléphone" value="<?=$phone?>">
+                    <textarea class="msg" name="message" placeholder="Votre question, suggestion et/ou avis !"><?=$message?></textarea>
             </div>
             <input type="submit" name="envoyer" value="Envoyer" class="btnenvoyer">
 

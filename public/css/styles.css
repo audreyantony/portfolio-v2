@@ -305,11 +305,16 @@ section {
 section .contenu form {
     background-color: rgba(203,200,202,0.6);
     padding: 2% 5%;
-    text-align: right;
+    text-align: left;
     letter-spacing: 1px;
     font-size: 0.9em;
     transition: 1s;
     color: #545452;
+}
+section .contenu form .warning {
+    height: 25px;
+    padding-left: 2%;
+    color: #535052;
 }
 
 

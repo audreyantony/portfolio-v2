@@ -307,13 +307,18 @@ section {
 section .contenu form {
     background-color: rgba(20,20,20,0.4);
     padding: 2% 5%;
-    text-align: right;
+    text-align: left;
     letter-spacing: 1px;
     font-size: 0.9em;
     transition: 1s;
     color: #F3F0F2;
 }
 
+section .contenu form .warning {
+    height: 25px;
+    padding-left: 2%;
+    color: #F3F0F2;
+}
 
 section .contenu form .grid-container {
     padding: 15px;
