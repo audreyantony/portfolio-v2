@@ -37,7 +37,7 @@ if (isset($_POST['envoyer'])){
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             $warning = "L'adresse mail entrée est incorrecte";
         } else {
-            $mail = sendMail($name, $phone, $mail, $message, $db);
+            $warning = sendMail($name, $phone, $mail, $message, $db);
         }
     }
 }
