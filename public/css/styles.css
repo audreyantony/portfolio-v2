@@ -403,6 +403,92 @@ section .contenu form .btnenvoyer:hover {
     cursor: pointer;
 }
 
+/* CONNECTION PAGE */
+
+section .contenu .container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: start;
+    position: relative;
+    bottom: 50px;
+}
+
+section .contenu .container-flex .crud {
+    text-align: center;
+    flex: 0 0 auto;
+    margin: 10px;
+    height: 30vh;
+}
+
+section .contenu .container-flex #crud1 {
+    width: 65%;
+    transition: 0.5s ease;
+}
+section .contenu .container-flex #crud2 {
+    width: 25%;
+    transition: 0.5s ease;
+}
+
+section .contenu .container-flex .crud h3 {
+    font-family: 'Fredericka the Great', sans-serif;
+    color: #535052;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    position: relative;
+    top: 35px;
+    font-weight: lighter;
+}
+
+section .contenu .container-flex .crud button {
+    display: inline;
+}
+
+section .contenu .container-flex .crud form {
+    min-height: 200px;
+    text-align: center;
+}
+
+section .contenu .container-flex .crud input {
+    width: 80%;
+    height: auto;
+    padding: 5px;
+    background-color: #F5EFF4;
+    border: none;
+    color: #42433E;
+    margin-bottom: 5px;
+}
+
+section .contenu .container-flex .crud input[type=submit] {
+    width: 50%;
+    margin-top: 30px;
+}
+
+section .contenu .container-flex .crud textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    min-width: 80%;
+    max-width: 90%;
+    height: auto;
+    padding: 5px;
+    background-color: #F5EFF4;
+    border: none;
+    color: #42433E;
+}
+
+section .contenu .container-flex .crud select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    width: 80%;
+    height: auto;
+    padding: 5px;
+    background-color: #F5EFF4;
+    border: none;
+    color: #42433E;
+}
+
 /* MEDIA QUERY */
 
 @media screen and (max-height: 450px) {
