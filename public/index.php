@@ -16,7 +16,7 @@ if(!$db){
     die();
 }
 // LIGHTMODE / DARKMODE
-$styleCookie = $_COOKIE["style"];
+$styleCookie = isset($_COOKIE["style"]) ? $_COOKIE["style"] : "";
 switch($styleCookie) {
     case "lightmode":
         $header = require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'parts' . DIRECTORY_SEPARATOR . 'header.view.php';

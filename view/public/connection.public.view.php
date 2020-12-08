@@ -11,7 +11,14 @@
                     <input id="pseudo" type="text" name="pseudo" placeholder="Login" required><br>
                     <label for="mdp">Votre mot de passe :</label><br>
                     <input id="mdp" type="password" name="mdp" placeholder="Password" required><br>
-                    <input type="submit" value="GO"><br>
+                    <?php
+                    if (isset($warning)){
+                        echo "<h6>".$warning."</h6>";
+                    } else {
+                        echo "<h6> </h6>";
+                    }
+                    ?>
+                    <input type="submit" name="signin" value="GO"><br>
                 </form>
             </div>
             <div id="crud1block"><img src="img/parts/<?=($styleCookie == "darkmode") ? "connexiondark.png" : "connexionlight.png"?>"></div>
@@ -23,6 +30,13 @@
                     <input type="email" name="mail-signup" placeholder="E-mail" required><br>
                     <input type="password" name="mdp-signup" placeholder="Password" required><br>
                     <input type="password" name="mdp-signup" placeholder="Password confirmation" required><br>
+                    <?php
+                    if (isset($warning2)){
+                        echo "<h6>".$warning2."</h6>";
+                    } else {
+                        echo "<h6> </h6>";
+                    }
+                    ?>
                     <input type="submit" value="GO"><br>
                 </form>
             </div>

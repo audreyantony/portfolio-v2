@@ -498,6 +498,14 @@ section .contenu .container-flex .crud h3 {
     font-weight: lighter;
 }
 
+section .contenu .container-flex .crud form h6 {
+    margin: 0 5%;
+    letter-spacing: 2px;
+    color: #535052;
+    text-transform: uppercase;
+    height: 15px;
+}
+
 section .contenu .container-flex .crud button {
     display: inline;
 }

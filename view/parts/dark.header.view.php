@@ -20,7 +20,13 @@
                         <a href="?page=links"><li>Liens</li></a>
                         <a href="?page=cv"><li>CV</li></a>
                         <a href="?page=contact"><li>Contact</li></a>
-                        <a href="?page=connection"><li>Connexion</li></a>
+                        <?php
+                        if (isset($_SESSION['session_id'])&&$_SESSION['session_id']==session_id()){
+                            echo '<a href="?admin=deco"><li>Déconnexion</li></a>';
+                        } else {
+                            echo '<a href="?page=connection"><li>Connexion</li></a>';
+                        }
+                        ?>
                     </ul>
                     <div id="container">
                         <div class="inner-container">

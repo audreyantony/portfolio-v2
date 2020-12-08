@@ -43,7 +43,7 @@ if (isset($_GET['page'])) {
 }
 
 
-if (!isset($_GET['page'])){
+if (!isset($_GET['page']) && !isset($_GET['admin'])){
 
     // DISPLAY OF THE HOME PAGE
     $header;
