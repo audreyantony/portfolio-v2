@@ -28,7 +28,7 @@
             </div>
             <div id="crud2block"><img src="img/parts/<?=($styleCookie == "darkmode") ? "inscriptiondark.png" : "inscriptionlight.png"?>"></div>
         </div>
-        <a href="?page=home"><button>
+        <a href="?page=home" class="middle"><button>
                 Retour à l'accueil
             </button></a>
     </div>
