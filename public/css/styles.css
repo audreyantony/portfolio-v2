@@ -413,7 +413,8 @@ section .contenu .container-flex {
     align-items: center;
     align-content: start;
     position: relative;
-    bottom: 50px;
+    bottom: 80px;
+    margin-bottom: 30px;
 }
 
 section .contenu .container-flex .crud {
@@ -424,12 +425,63 @@ section .contenu .container-flex .crud {
 }
 
 section .contenu .container-flex #crud1 {
-    width: 65%;
+    width: 75%;
     transition: 0.5s ease;
 }
 section .contenu .container-flex #crud2 {
-    width: 25%;
+    width: 75%;
     transition: 0.5s ease;
+    display: none;
+}
+
+section .contenu .container-flex #crud1block {
+    width: 15%;
+    transition: 0.5s ease;
+    background-color: rgba(203,200,202,0.8);
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    color: #545452;
+    display: none;
+    height: 240px;
+    position: relative;
+    top: 60px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+section .contenu .container-flex #crud2block {
+    width: 15%;
+    transition: 0.5s ease;
+    background-color: rgba(203,200,202,0.8);
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.9em;
+    color: #545452;
+    height: 240px;
+    position: relative;
+    top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+section .contenu .container-flex #crud1block img {
+    width: 100%;
+    margin: 10% auto;
+    flex: 0 0 auto;
+}
+
+section .contenu .container-flex #crud2block img {
+    width: 100%;
+    margin: 10% auto;
+    flex: 0 0 auto;
 }
 
 section .contenu .container-flex .crud h3 {
@@ -448,22 +500,35 @@ section .contenu .container-flex .crud button {
 
 section .contenu .container-flex .crud form {
     min-height: 200px;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
+}
+section .contenu .container-flex .crud form label {
+    color: #535052;
+    font-size: 0.8em;
+    font-weight: 200;
+    text-align: left;padding: 5px 0;
 }
 
 section .contenu .container-flex .crud input {
-    width: 80%;
+    width: 100%;
     height: auto;
     padding: 5px;
     background-color: #F5EFF4;
     border: none;
     color: #42433E;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 5px;
+    letter-spacing: 2px;
 }
 
 section .contenu .container-flex .crud input[type=submit] {
-    width: 50%;
+    width: 40%;
     margin-top: 30px;
+    color: #545452;
+    font-weight: 200;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 section .contenu .container-flex .crud textarea {
