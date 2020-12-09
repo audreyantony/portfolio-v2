@@ -16,7 +16,7 @@ if(!$db){
     die();
 }
 // LIGHTMODE / DARKMODE
-$styleCookie = $_COOKIE["style"];
+$styleCookie = isset($_COOKIE["style"]) ? $_COOKIE["style"] : "";
 switch($styleCookie) {
     case "lightmode":
         $header = require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'parts' . DIRECTORY_SEPARATOR . 'header.view.php';
@@ -31,13 +31,10 @@ switch($styleCookie) {
         $footer = require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'parts' . DIRECTORY_SEPARATOR . 'footer.view.php';
 }
 
-
 // ADMIN CONTROLLER IF SOMEONE IS CONNECTED AND IF THIS PERSON HAS A PERMISSION
 if(isset($_SESSION['session_id'])&&$_SESSION['session_id']==session_id()){
 
-    if($_SESSION['permission']== 1){
-        require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'main.admin.controller.php';
-    }
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'main.admin.controller.php';
 
 }
 

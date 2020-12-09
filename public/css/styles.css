@@ -413,7 +413,14 @@ section .contenu .container-flex {
     align-items: center;
     align-content: start;
     position: relative;
-    bottom: 50px;
+    bottom: 80px;
+}
+
+section .contenu .middle {
+    position: absolute;
+    bottom: 10%;
+    width: 70%;
+    text-align: center;
 }
 
 section .contenu .container-flex .crud {
@@ -424,22 +431,79 @@ section .contenu .container-flex .crud {
 }
 
 section .contenu .container-flex #crud1 {
-    width: 65%;
+    width: 75%;
     transition: 0.5s ease;
 }
 section .contenu .container-flex #crud2 {
-    width: 25%;
+    width: 75%;
     transition: 0.5s ease;
+    display: none;
+}
+
+section .contenu .container-flex #crud1block {
+    width: 15%;
+    transition: 0.5s ease;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    color: #545452;
+    display: none;
+    height: 240px;
+    position: relative;
+    top: 115px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+section .contenu .container-flex #crud2block {
+    width: 15%;
+    transition: 0.5s ease;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.9em;
+    color: #545452;
+    height: 240px;
+    position: relative;
+    top: 115px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+section .contenu .container-flex #crud1block img {
+    width: 100%;
+    margin: 10% auto;
+    flex: 0 0 auto;
+}
+
+section .contenu .container-flex #crud2block img {
+    width: 100%;
+    margin: 10% auto;
+    flex: 0 0 auto;
 }
 
 section .contenu .container-flex .crud h3 {
     font-family: 'Fredericka the Great', sans-serif;
     color: #535052;
-    font-size: 1.5em;
+    font-size: 2.5em;
     letter-spacing: 4px;
     position: relative;
-    top: 35px;
+    top: 55px;
     font-weight: lighter;
+}
+
+section .contenu .container-flex .crud form h6 {
+    margin: 0 5%;
+    letter-spacing: 2px;
+    color: #535052;
+    text-transform: uppercase;
+    height: 15px;
 }
 
 section .contenu .container-flex .crud button {
@@ -448,45 +512,37 @@ section .contenu .container-flex .crud button {
 
 section .contenu .container-flex .crud form {
     min-height: 200px;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
+}
+section .contenu .container-flex .crud form label {
+    color: #535052;
+    font-size: 0.8em;
+    font-weight: 200;
+    text-align: left;
+    padding: 5px 0;
+    margin: 1% 5%;
 }
 
 section .contenu .container-flex .crud input {
-    width: 80%;
+    width: 90%;
     height: auto;
     padding: 5px;
     background-color: #F5EFF4;
     border: none;
     color: #42433E;
-    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1% 5%;
+    letter-spacing: 2px;
 }
 
 section .contenu .container-flex .crud input[type=submit] {
-    width: 50%;
+    width: 40%;
     margin-top: 30px;
-}
-
-section .contenu .container-flex .crud textarea {
+    color: #545452;
+    font-weight: 200;
+    letter-spacing: 3px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9em;
-    min-width: 80%;
-    max-width: 90%;
-    height: auto;
-    padding: 5px;
-    background-color: #F5EFF4;
-    border: none;
-    color: #42433E;
-}
-
-section .contenu .container-flex .crud select {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9em;
-    width: 80%;
-    height: auto;
-    padding: 5px;
-    background-color: #F5EFF4;
-    border: none;
-    color: #42433E;
 }
 
 /* MEDIA QUERY */

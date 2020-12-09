@@ -405,6 +405,149 @@ section .contenu form .btnenvoyer:hover {
     cursor: pointer;
 }
 
+/* CONNECTION PAGE */
+
+section .contenu .container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: start;
+    position: relative;
+    bottom: 80px;
+}
+
+section .contenu .middle {
+    position: absolute;
+    bottom: 10%;
+    width: 70%;
+    text-align: center;
+}
+
+section .contenu .container-flex .crud {
+    text-align: center;
+    flex: 0 0 auto;
+    margin: 10px;
+    height: 30vh;
+}
+
+section .contenu .container-flex #crud1 {
+    width: 75%;
+    transition: 0.5s ease;
+}
+section .contenu .container-flex #crud2 {
+    width: 75%;
+    transition: 0.5s ease;
+    display: none;
+}
+
+section .contenu .container-flex #crud1block {
+    width: 15%;
+    transition: 0.5s ease;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    color: #F3F0F2;
+    display: none;
+    height: 240px;
+    position: relative;
+    top: 115px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+section .contenu .container-flex #crud2block {
+    width: 15%;
+    transition: 0.5s ease;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.9em;
+    color: #F3F0F2;
+    height: 240px;
+    position: relative;
+    top: 115px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+section .contenu .container-flex #crud1block img {
+    width: 100%;
+    margin: 10% auto;
+    flex: 0 0 auto;
+}
+
+section .contenu .container-flex #crud2block img {
+    width: 100%;
+    margin: 10% auto;
+    flex: 0 0 auto;
+}
+
+section .contenu .container-flex .crud h3 {
+    font-family: 'Fredericka the Great', sans-serif;
+    color: #F3F0F2;
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    position: relative;
+    top: 55px;
+    font-weight: lighter;
+}
+
+section .contenu .container-flex .crud form h6 {
+    margin: 0 5%;
+    letter-spacing: 2px;
+    color: #F3F0F2;
+    text-transform: uppercase;
+    height: 15px;
+}
+
+section .contenu .container-flex .crud button {
+    display: inline;
+}
+
+section .contenu .container-flex .crud form {
+    min-height: 200px;
+    text-align: left;
+    padding: 20px;
+}
+section .contenu .container-flex .crud form label {
+    color: #F3F0F2;
+    font-size: 0.8em;
+    font-weight: 200;
+    text-align: left;
+    padding: 5px 0;
+    margin: 1% 5%;
+}
+
+section .contenu .container-flex .crud input {
+    width: 90%;
+    height: auto;
+    padding: 5px;
+    background-color: #535052;
+    border: none;
+    color: #F3F0F2;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1% 5%;
+    letter-spacing: 2px;
+}
+
+section .contenu .container-flex .crud input[type=submit] {
+    width: 40%;
+    margin-top: 30px;
+    color: #F3F0F2;
+    font-weight: 200;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 /* MEDIA QUERY */
 
 @media screen and (max-height: 450px) {
