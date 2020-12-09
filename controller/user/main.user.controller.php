@@ -27,9 +27,13 @@ if (isset($_GET['page'])) {
         case "contact":
             include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . 'contact.user.controller.php';
             break;
-        // CONTACT PAGE
+        // CONNECTION PAGE
         case "connection":
             include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'connection.public.controller.php';
+            break;
+        // REGISTRATION PAGE
+        case "registration":
+            include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'registration.public.controller.php';
             break;
         // DEFAULT PAGE -> 404
         default :

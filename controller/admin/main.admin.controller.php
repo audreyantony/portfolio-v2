@@ -23,9 +23,9 @@ if (isset($_GET['admin'])) {
         case "contact":
             include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'contact.admin.controller.php';
             break;
-        // CONTACT ADMIN PAGE
-        case "deco":
-            header("Location: ../controller/public/disconnection.php");
+        // DISCONNECTION ADMIN PAGE
+        case "disconnection":
+            include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'disconnection.public.controller.php';
             break;
         // DEFAULT ADMIN PAGE -> 404
         default :

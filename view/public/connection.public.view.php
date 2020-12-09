@@ -29,7 +29,7 @@
                     <input type="text" name="pseudo-signup" placeholder="Login" required><br>
                     <input type="email" name="mail-signup" placeholder="E-mail" required><br>
                     <input type="password" name="mdp-signup" placeholder="Password" required><br>
-                    <input type="password" name="mdp-signup" placeholder="Password confirmation" required><br>
+                    <input type="password" name="mdpcheck-signup" placeholder="Password confirmation" required><br>
                     <?php
                     if (isset($warning2)){
                         echo "<h6>".$warning2."</h6>";
@@ -37,7 +37,7 @@
                         echo "<h6> </h6>";
                     }
                     ?>
-                    <input type="submit" value="GO"><br>
+                    <input type="submit" name="signup" value="GO"><br>
                 </form>
             </div>
             <div id="crud2block"><img src="img/parts/<?=($styleCookie == "darkmode") ? "inscriptiondark.png" : "inscriptionlight.png"?>"></div>

@@ -15,15 +15,21 @@
                 <nav role="navigation">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                     <ul class="menu">
-                        <a href="?page=home"><li>Accueil</li></a>
-                        <a href="?page=gallery"><li>Galerie</li></a>
-                        <a href="?page=links"><li>Liens</li></a>
-                        <a href="?page=cv"><li>CV</li></a>
-                        <a href="?page=contact"><li>Contact</li></a>
                         <?php
-                        if (isset($_SESSION['session_id'])&&$_SESSION['session_id']==session_id()){
-                            echo '<a href="?admin=deco"><li>Déconnexion</li></a>';
+                        if (isset($_SESSION['session_id']) && $_SESSION['session_id']==session_id()){
+                            echo '<a href="?admin=home"><li>Accueil</li></a>';
+                            if($_SESSION['permission'] == 1) {
+                                echo '<a href="?admin=gallery"><li>Galerie</li></a>';
+                                echo '<a href="?admin=links"><li>Liens</li></a>';
+                                echo '<a href="?admin=contact"><li>Contact</li></a>';
+                            }
+                            echo '<a href="?admin=disconnection"><li>Déconnexion</li></a>';
                         } else {
+                            echo '<a href="?page=home"><li>Accueil</li></a>';
+                            echo '<a href="?page=gallery"><li>Galerie</li></a>';
+                            echo '<a href="?page=links"><li>Liens</li></a>';
+                            echo '<a href="?page=cv"><li>CV</li></a>';
+                            echo '<a href="?page=contact"><li>Contact</li></a>';
                             echo '<a href="?page=connection"><li>Connexion</li></a>';
                         }
                         ?>

@@ -45,7 +45,7 @@ if (isset($_POST['signin'])){
                 // FILL THE SESSION WITH USER INFORMATION
                 $_SESSION['session_id'] = session_id();
                 $_SESSION['user'] = $userQueryInArray;
-                $_SESSION['permission'] = $userQueryInArray['permission_status_portfolio_user'];
+                $_SESSION['permission'] = $userQueryInArray['permission_portfolio_user'];
 
                 // IF THE USER IS AN ADMIN
                 if($_SESSION['permission'] == 1){
@@ -85,6 +85,101 @@ if (isset($_POST['signin'])){
             $warning = "Oups, ré-essayez s'il vous plaît";
             $nickname = "";
             $pwd = "";
+        }
+    }
+}
+
+$signUpNickname = isset($_POST['pseudo-signup']) ? entryCleaning($_POST['pseudo-signup']) : "";
+$signUpMail = isset($_POST['mail-signup']) ? entryCleaning($_POST['mail-signup']) : "";
+$signUpPwd = isset($_POST['mdp-signup']) ? entryCleaning($_POST['mdp-signup']) : "";
+$signUpCheckPwd = isset($_POST['mdpcheck-signup']) ? entryCleaning($_POST['mdpcheck-signup']) : "";
+
+// SOMEONE TRY TO SIGN UP :
+if (isset($_POST['sign_up'])){
+
+    // IF ONE OF THE FIELDS ARE EMPTY
+    if (empty($_POST['pseudo-signup']) || empty($_POST['mail-signup']) || empty($_POST['mdp-signup']) || empty($_POST['mdpcheck-signup'])) {
+
+        // WARNING
+        $warning2 = "Remplissez tout les champs !";
+
+        // IF THE PASSWORDS DO NOT MATCH
+    } else if ($_POST['mdp-signup'] !== $_POST['mdpcheck-signup']){
+
+        // WARNING
+        $warning2 = "Les mots de passe doivent être identique !";
+        $signUpPwd = "";
+        $signUpCheckPwd = "";
+
+        // IF ALL THE FIELDS ARE FILLED
+    } else {
+
+        $signupCheckUp = signUpSelect($signUpNickname,$signUpMail, $db);
+        $signUpCheckUpArray = $signupCheckUp->fetch(PDO::FETCH_ASSOC);
+
+        // IF THE NICKNAME AND THE EMAIL ARE ALREADY USED (SEPARATELY)
+        if ($signupCheckUp->rowCount() > 1 ){
+
+            // WARNING
+            $warning2 = "Cette adresse email et ce pseudo sont déjà utilisés";
+
+            // IF IT'S ONLY THE NICKNAME OR ONLY THE EMAIL OR BOTH (BY ONE USER)
+        } else if ($signupCheckUp->rowCount() === 1 ) {
+
+            // NICKNAME AND EMAIL
+            if ($signUpCheckUpArray['nickname_portfolio_user'] === $signUpNickname && $signUpCheckUpArray['mail_portfolio_user'] === $signUpMail){
+
+                // WARNING
+                $warning2 = "Ces informations appartiennent déjà à un utilisateur";
+                $signUpNickname = "";
+                $signUpMail = "";
+            }
+
+            // NICKNAME
+            if ($signUpCheckUpArray['nickname_portfolio_user'] === $signUpNickname ){
+
+                // WARNING
+                $warning2 = "Ce pseudo appartient déjà à quelqu'un !";
+                $signUpNickname = "";
+            }
+
+            // EMAIL
+            if ($signUpCheckUpArray['mail_portfolio_user'] === $signUpMail ) {
+
+                // WARNING
+                $warning2 = "Cette adresse mail est déjà utilisée";
+                $signUpMail = "";
+            }
+
+        } else if ($signupCheckUp->rowCount() === 0 ){
+
+            // PASSWORD_HASH
+            $signUpRealPwd = password_hash($signUpPwd, PASSWORD_DEFAULT);
+
+            // INSERT QUERY TO INITIALISE USER
+            $au_queryInsertResult = signUpUserInsertInto($signUpNickname, $signUpRealPwd, $signUpMail, $db);
+
+            // IF THE INSERT INTO WORKED
+            if($au_queryInsertResult){
+
+                // WARNING
+                $warning2 = "Welcome ". $signUpNickname. " ! Please confirm your email before signing in";
+                $signUpNickname = " ";
+                $signUpMail = " ";
+                $signUpPwd = "";
+                $signUpCheckPwd = "";
+
+                // IF THE INSERT INTO FAILED
+            } else {
+
+                // WARNING
+                $warning2 = "Sorry, an error has occurred, please retry";
+                $signUpNickname = "";
+                $signUpMail = "";
+                $signUpPwd = "";
+                $signUpCheckPwd = "";
+
+            }
         }
     }
 }
