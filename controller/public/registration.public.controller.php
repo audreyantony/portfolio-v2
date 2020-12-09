@@ -1,5 +1,8 @@
 <?php
 
+// MODEL
+include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'model' . DIRECTORY_SEPARATOR . 'signup.model.php';
+
 // IF THE VALIDATION IS 'OK'
 if (isset($_GET['validation']) && $_GET['validation'] === "yes") {
 
@@ -17,7 +20,7 @@ if (isset($_GET['validation']) && $_GET['validation'] === "yes") {
         $warning = "Bonjour " . $registrationFor . " ! L'email est déjà confirmé, vous pouvez vous connecter";
         header('Location : ?page=connection');
 
-    } else if (($userArray['validation_status_portfolio_user'] == 0) && ($registrationKey == $userArray['validation_status_portfolio_user'])) {
+    } else if (($userArray['validation_status_portfolio_user'] == 0) && ($registrationKey == $userArray['validation_key_portfolio_user'])) {
 
         // USER VALIDATION STATUS UPDATE
         $registrationUpdate = registrationUpdateUser($registrationFor, $registrationKey, $db);
@@ -44,3 +47,6 @@ if (isset($_GET['validation']) && $_GET['validation'] === "yes") {
     }
 
 }
+
+// VIEW
+include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'connection.public.view.php';

@@ -17,7 +17,7 @@ function signUpUserInsertInto($nickname, $pwd, $mail, $db){
     $validationKey = md5(microtime(TRUE) * 100000);
 
     // INSERT INTO QUERYS
-    $query = "INSERT INTO user (nickname_portfolio_user, pwd_portfolio_user, mail_portfolio_user, permission_portfolio_user, validation_status_portfolio_user, confirmation_key_portfolio_user) VALUES (?,?,?,?,?,?);";
+    $query = "INSERT INTO portfolio_user (nickname_portfolio_user, pwd_portfolio_user, mail_portfolio_user, permission_portfolio_user, validation_status_portfolio_user, validation_key_portfolio_user) VALUES (?,?,?,?,?,?);";
 
     $prepareQuery = $db->prepare($query);
 
@@ -29,6 +29,8 @@ function signUpUserInsertInto($nickname, $pwd, $mail, $db){
     $prepareQuery->bindValue(6,$validationKey,PDO::PARAM_STR);
 
     $insertUser = $prepareQuery->execute();
+
+    echo $insertUser;
 
     // IF EVERY QUERY PASSED THRU
     if ($insertUser) {
@@ -52,7 +54,7 @@ function signUpUserInsertInto($nickname, $pwd, $mail, $db){
                 	
                 </div >
                 <p style = "letter-spacing: 3px;  color: #545452; padding: 10px; text-align: left;" > Pour activer votre compte veuillez cliquer sur le lien suivant : <br><br>
-                	<a href = "https://audrey.webdev-cf2m.be/portfolio/?page=registratio&validation=yesn&for=' . urlencode($nickname) . '&key=' . urlencode($registrationArray['validation_key_portfolio_user']) . '" style = "color: #304B42; font-weight: 300; text-decoration: underline;" > https://audrey.webdev-cf2m.be/portfolio/?page=registration&validation=yes&for=' . urlencode($nickname) . '&key=' . urlencode($registrationArray['validation_key_portfolio_user']) . '</a><br><br>
+                	<a href = "https://audrey.webdev-cf2m.be/portfolio-v2/public/?page=registratio&validation=yesn&for=' . urlencode($nickname) . '&key=' . urlencode($registrationArray['validation_key_portfolio_user']) . '" style = "color: #304B42; font-weight: 300; text-decoration: underline;" > https://audrey.webdev-cf2m.be/portfolio-v2/public/?page=registration&validation=yes&for=' . urlencode($nickname) . '&key=' . urlencode($registrationArray['validation_key_portfolio_user']) . '</a><br><br>
                 </p >
             </div >
         </body >
@@ -67,7 +69,6 @@ function signUpUserInsertInto($nickname, $pwd, $mail, $db){
         }
     }
 }
-
 
 // UPDATE QUERY FOR THE REGISTRATION PROCESS
 function registrationUpdateUser($nickname, $validationKey, $db){

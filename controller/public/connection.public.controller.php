@@ -95,7 +95,7 @@ $signUpPwd = isset($_POST['mdp-signup']) ? entryCleaning($_POST['mdp-signup']) :
 $signUpCheckPwd = isset($_POST['mdpcheck-signup']) ? entryCleaning($_POST['mdpcheck-signup']) : "";
 
 // SOMEONE TRY TO SIGN UP :
-if (isset($_POST['sign_up'])){
+if (isset($_POST['signup'])){
 
     // IF ONE OF THE FIELDS ARE EMPTY
     if (empty($_POST['pseudo-signup']) || empty($_POST['mail-signup']) || empty($_POST['mdp-signup']) || empty($_POST['mdpcheck-signup'])) {
@@ -163,7 +163,7 @@ if (isset($_POST['sign_up'])){
             if($au_queryInsertResult){
 
                 // WARNING
-                $warning2 = "Welcome ". $signUpNickname. " ! Please confirm your email before signing in";
+                $warning2 = "Bonjour ". $signUpNickname. " ! Confirmez votre adresse e-mail avant de vous connecter";
                 $signUpNickname = " ";
                 $signUpMail = " ";
                 $signUpPwd = "";
@@ -173,7 +173,7 @@ if (isset($_POST['sign_up'])){
             } else {
 
                 // WARNING
-                $warning2 = "Sorry, an error has occurred, please retry";
+                $warning2 = "Il y a eu une erreur, ré-essayer s'il vous plaît";
                 $signUpNickname = "";
                 $signUpMail = "";
                 $signUpPwd = "";

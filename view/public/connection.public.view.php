@@ -8,9 +8,9 @@
                 <h3 id="titre1">Connexion</h3>
                 <form action=""  method="post">
                     <label for="pseudo">Votre Pseudo :</label><br>
-                    <input id="pseudo" type="text" name="pseudo" placeholder="Login" required><br>
+                    <input id="pseudo" type="text" name="pseudo" placeholder="Login" required value="<?=$nickname?>"><br>
                     <label for="mdp">Votre mot de passe :</label><br>
-                    <input id="mdp" type="password" name="mdp" placeholder="Password" required><br>
+                    <input id="mdp" type="password" name="mdp" placeholder="Password" required value="<?=$pwd?>"><br>
                     <?php
                     if (isset($warning)){
                         echo "<h6>".$warning."</h6>";
@@ -26,10 +26,10 @@
                 <h3>Inscription</h3>
                 <form action="" method="post">
                     <label for="pseudo">Veuillez renseigner :</label><br>
-                    <input type="text" name="pseudo-signup" placeholder="Login" required><br>
-                    <input type="email" name="mail-signup" placeholder="E-mail" required><br>
-                    <input type="password" name="mdp-signup" placeholder="Password" required><br>
-                    <input type="password" name="mdpcheck-signup" placeholder="Password confirmation" required><br>
+                    <input type="text" name="pseudo-signup" placeholder="Login" required value="<?=$signUpNickname?>"><br>
+                    <input type="email" name="mail-signup" placeholder="E-mail" required value="<?=$signUpMail?>"><br>
+                    <input type="password" name="mdp-signup" placeholder="Password" required value="<?=$signUpPwd?>"><br>
+                    <input type="password" name="mdpcheck-signup" placeholder="Password confirmation" required value="<?=$signUpCheckPwd?>"><br>
                     <?php
                     if (isset($warning2)){
                         echo "<h6>".$warning2."</h6>";
